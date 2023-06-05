@@ -22,9 +22,8 @@ public class RemoveVersionWatermarkPlugin : BasePlugin
 	private static void BackgroundButton_OnClick()
 	{
 		var versionStringObject = GameObject.Find("VersionString");
-		if (versionStringObject != null) {
+		if (versionStringObject != null && versionStringObject.active == true) {
 			versionStringObject.active = false;
 		}
-		
 	}
 }
