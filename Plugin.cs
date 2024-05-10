@@ -17,13 +17,14 @@ public class RemoveVersionWatermarkPlugin : BasePlugin
 		Log.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} version {MyPluginInfo.PLUGIN_VERSION} is loaded!");
 	}
 
-	[HarmonyPostfix]
-	[HarmonyPatch(typeof(ConnectingView), nameof(ConnectingView.BackgroundButton_OnClick))]
-	private static void BackgroundButton_OnClick()
-	{
-		var versionStringObject = GameObject.Find("VersionString");
-		if (versionStringObject != null && versionStringObject.active == true) {
-			versionStringObject.active = false;
-		}
-	}
+    [HarmonyPostfix]
+    [HarmonyPatch(typeof(VersionString), nameof(VersionString.Start))]
+    public static void VersionString_Start()
+    {
+        var versionStringObject = GameObject.Find("VersionString");
+        if (versionStringObject != null && versionStringObject.active == true)
+        {
+            versionStringObject.active = false;
+        }
+    }
 }
