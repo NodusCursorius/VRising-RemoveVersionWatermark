@@ -4,7 +4,7 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<AssemblyName>RemoveVersionWatermark</AssemblyName>
 		<Description>Removes Version Watermark</Description>
-		<Version>1.0.2</Version>
+		<Version>1.0.3</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
 		<RootNamespace>RemoveVersionWatermark</RootNamespace>
@@ -18,7 +18,7 @@
 		<PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be*" IncludeAssets="compile" />
 		<PackageReference Include="BepInEx.Core" Version="6.0.0-be*" IncludeAssets="compile" />
 		<PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
-		<PackageReference Include="VRising.Unhollowed.Client" Version="1.0.0.*" />
+		<PackageReference Include="VRising.Unhollowed.Client" Version="1.0.*" />
 	</ItemGroup>
 
 	<Target Name="CopyPackageFiles" AfterTargets="Build">

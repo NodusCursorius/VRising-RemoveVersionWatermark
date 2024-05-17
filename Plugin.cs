@@ -9,13 +9,13 @@ namespace RemoveVersionWatermark;
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 public class RemoveVersionWatermarkPlugin : BasePlugin
 {
-	private static Harmony harmony;
+    private static Harmony harmony;
 
-	public override void Load()
-	{
-		harmony = Harmony.CreateAndPatchAll(typeof(RemoveVersionWatermarkPlugin));
-		Log.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} version {MyPluginInfo.PLUGIN_VERSION} is loaded!");
-	}
+    public override void Load()
+    {
+        harmony = Harmony.CreateAndPatchAll(typeof(RemoveVersionWatermarkPlugin));
+        Log.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} version {MyPluginInfo.PLUGIN_VERSION} is loaded!");
+    }
 
     [HarmonyPostfix]
     [HarmonyPatch(typeof(VersionString), nameof(VersionString.Start))]
