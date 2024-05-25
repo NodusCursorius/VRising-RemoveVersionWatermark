@@ -1,7 +1,6 @@
 ﻿using BepInEx;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
-using ProjectM.UI;
 using UnityEngine;
 
 namespace RemoveVersionWatermark;
