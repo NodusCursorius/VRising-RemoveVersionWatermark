@@ -1,0 +1,9 @@
+{
+    "name": "RemoveVersionWatermark",
+    "version_number": "1.0.3",
+    "website_url": "https://github.com/NodusCursorius/VRising-RemoveVersionWatermark",
+    "description": "Removes version watermark",
+    "dependencies": [
+        "BepInEx-BepInExPack_V_Rising-1.691.3"
+    ]
+}
