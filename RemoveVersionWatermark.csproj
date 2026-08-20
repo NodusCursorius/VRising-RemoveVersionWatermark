@@ -4,21 +4,22 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<AssemblyName>RemoveVersionWatermark</AssemblyName>
 		<Description>Removes Version Watermark</Description>
-		<Version>1.0.3</Version>
+		<Version>1.0.4</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
 		<RootNamespace>RemoveVersionWatermark</RootNamespace>
 		<Authors>NodusCursorius</Authors>
 		<PackageId>$(Authors).$(AssemblyName)</PackageId>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<PluginFolder>D:\SteamLibrary\steamapps\common\VRising\BepInEx\plugins</PluginFolder>
+		<PluginFolder>D:\Games\SteamLibrary\steamapps\common\VRising\BepInEx\plugins</PluginFolder>
+		<OutputType>Library</OutputType>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.*" IncludeAssets="compile" />
 		<PackageReference Include="BepInEx.Core" Version="6.0.0-be.*" IncludeAssets="compile" />
 		<PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
-		<PackageReference Include="VRising.Unhollowed.Client" Version="1.0.*" />
+		<PackageReference Include="VRising.Unhollowed.Client" Version="1.1.*" />
 	</ItemGroup>
 
 	<Target Name="CopyPackageFiles" AfterTargets="Build">
